@@ -10,6 +10,16 @@ namespace GeekBrains.OOP.Lesson3.Task3
     {
         static void Main(string[] args)
         {
+            FileOperation file = new FileOperation();
+            string readFile = file.ReadFromFile();
+
+            file.SearchMail(ref readFile);
+            Console.WriteLine(readFile);
+
+            file.CreateFile(readFile);
+            Console.ReadKey();
         }
+
+
     }
 }
